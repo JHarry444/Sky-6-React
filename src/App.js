@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Button from './components/Button';
+import Trainer from './components/Trainer';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       {Button()}
       <Button/>
+      <Trainer/>
       <Footer />
     </div>
   );
