@@ -1,8 +1,8 @@
 function Header() {
     return (
         <header>
-            <h1>Title</h1>
-            <h2>Subheading</h2>
+            <h1>My React App</h1>
+            <h2>Is awesome</h2>
         </header>
     )
 }
