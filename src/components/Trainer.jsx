@@ -1,11 +1,22 @@
-import trainerData from './trainers.json';
+// import trainerData from './trainers.json';
+import PropTypes from "prop-types";
 
-const Trainer = () => {
+const Trainer = (props) => {
     return ( <>
-        <p>Name: {trainerData.name}</p>
-        <p>Age: {trainerData.age}</p>
-        <p>Job: {trainerData.job}</p>
+        <p>Name: {props.name}</p>
+        <p>Age: {props.age}</p>
+        <p>Job: {props.job}</p>
     </> );
+}
+
+Trainer.defaultProps = {
+    job: "Trainer"
+}
+
+Trainer.propTypes = {
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired,
+    jon: PropTypes.string,
 }
  
 export default Trainer;

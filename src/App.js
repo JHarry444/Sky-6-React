@@ -11,7 +11,9 @@ function App() {
       <Header />
       {Button()}
       <Button/>
-      <Trainer/>
+      <Trainer name="Jordan" age={29} job="Senior Software"/>
+      <Trainer name="Cameron" age={30}/>
+      {Trainer({name: "Jordan B", age: 26, job: "Software"})}
       <Footer />
     </div>
   );
