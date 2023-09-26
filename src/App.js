@@ -6,6 +6,7 @@ import StaticData from './components/StaticData';
 import Counter from './components/state/Counter';
 import Converter from './components/state/Converter';
 import FilterableProductTable from './components/state/exercises/FilterableProductTable';
+import FilterableTrainers from './components/FilterableTrainers';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Converter />
       <br />
       <FilterableProductTable/>
+      <FilterableTrainers/>
       <Footer />
     </div>
   );
