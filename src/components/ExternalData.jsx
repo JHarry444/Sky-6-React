@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
 function ExternalData(props) {
-    const [trainers, setTrainers] = useState();
+    const [trainers, setTrainers] = useState([]);
 
     useEffect(function () {
         axios.get("http://localhost:4494/trainers")
@@ -14,7 +14,7 @@ function ExternalData(props) {
                 setTrainers(response.data);
             })
             .catch(err => console.error(err));
-    }, [props.search]); // use effect -> runs ONLY when component first loads
+    }, []); // use effect -> runs ONLY when component first loads
     const data = trainers.filter(trainer => trainer.name.toLowerCase().startsWith(props.search))
         .map(trainer => <Trainer key={trainer.id} name={trainer.name} age={trainer.age} job={trainer.job} />);
 
