@@ -9,8 +9,9 @@ function Counter() {
         setCount(count + 1); // changes count and re-renders
         // console.log("Count:", count);
     }
-    return ( <>
-        <input type="number" value={count} readOnly/>
+    return (<>
+        <h2>Counter</h2>
+        <input type="number" value={count} readOnly />
         <br />
         <button>-5</button>
         <button>-1</button>
@@ -18,7 +19,7 @@ function Counter() {
         {/* DON'T include the () after handleClick */}
         <button onClick={handleClick}>+1</button>
         <button>+5</button>
-    </> );
+    </>);
 }
 
 export default Counter;
