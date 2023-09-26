@@ -4,16 +4,18 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Button from './components/Button';
 import Trainer from './components/Trainer';
+import StaticData from './components/StaticData';
+import Counter from './components/state/Counter';
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <Counter/>
+      <br/>
       {Button()}
       <Button/>
-      <Trainer name="Jordan" age={29} job="Senior Software"/>
-      <Trainer name="Cameron" age={30}/>
-      {Trainer({name: "Jordan B", age: 26, job: "Software"})}
+      <StaticData/>
       <Footer />
     </div>
   );

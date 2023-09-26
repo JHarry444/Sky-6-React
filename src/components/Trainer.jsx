@@ -16,7 +16,7 @@ Trainer.defaultProps = {
 Trainer.propTypes = {
     name: PropTypes.string.isRequired,
     age: PropTypes.number.isRequired,
-    jon: PropTypes.string,
+    job: PropTypes.string.isRequired,
 }
  
 export default Trainer;
