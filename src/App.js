@@ -6,12 +6,15 @@ import Button from './components/Button';
 import Trainer from './components/Trainer';
 import StaticData from './components/StaticData';
 import Counter from './components/state/Counter';
+import Converter from './components/state/Converter';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Counter/>
+      <br/>
+      <Converter/>
       <br/>
       {Button()}
       <Button/>
