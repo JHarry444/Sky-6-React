@@ -1,16 +1,13 @@
 import { useState } from "react";
-import StaticData from "./StaticData";
 import SearchBar from "./SearchBar";
+import ExternalData from "./ExternalData";
 
 function FilterableTrainers() {
     const [search, setSearch] = useState("jord");
     return ( <>
         <h2>Inverse Data Flow</h2>
-        <SearchBar search={search} handleChange={(e) => {
-            debugger;
-            setSearch(e.target.value);
-        }}/>
-        <StaticData search={search}/>
+        <SearchBar search={search} handleChange={(e) => setSearch(e.target.value)}/>
+        <ExternalData search={search}/>
     </> );
 }
 

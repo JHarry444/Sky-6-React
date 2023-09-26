@@ -1,19 +1,21 @@
-[
-    {
-        "id": "aaaaaaa",
-        "name": "Jordan H",
-        "age": 29,
-        "job": "Senior Software"
-    },
-    {
-        "id": "bbbbbbbb",
-        "name": "Jordan B",
-        "age": 26
-    },
-    {
-        "id": "cccccccc",
-        "name": "Cameron",
-        "age": 30,
-        "job": "Senior Software"
-    }
-]
+{
+    "trainers": [
+        {
+            "id": "aaaaaaa",
+            "name": "Jordan H",
+            "age": 29,
+            "job": "Senior Software"
+        },
+        {
+            "id": "bbbbbbbb",
+            "name": "Jordan B",
+            "age": 26
+        },
+        {
+            "id": "cccccccc",
+            "name": "Cameron",
+            "age": 30,
+            "job": "Senior Software"
+        }
+    ]
+}
