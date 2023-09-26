@@ -5,6 +5,7 @@ import Button from './components/Button';
 import StaticData from './components/StaticData';
 import Counter from './components/state/Counter';
 import Converter from './components/state/Converter';
+import FilterableProductTable from './components/state/exercises/FilterableProductTable';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <br />
       <Converter />
       <br />
+      <FilterableProductTable/>
       <Footer />
     </div>
   );
