@@ -15,6 +15,14 @@ TrainerList.defaultProps = {
 
 TrainerList.propTypes = {
     search: PropTypes.string,
+    trainers: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string,
+            name: PropTypes.string,
+            age: PropTypes.number,
+            job: PropTypes.string,
+        })
+    )
 }
 
 
