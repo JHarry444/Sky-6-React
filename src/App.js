@@ -6,6 +6,7 @@ import Converter from './components/state/Converter';
 import FilterableProductTable from './components/state/exercises/FilterableProductTable';
 import FilterableTrainers from './components/external/FilterableTrainers';
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import TrainerDetails from './components/TrainerDetails';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/converter' element={<Converter />}/>
           <Route path='/products' element={<FilterableProductTable />}/>
           <Route path='/trainers' element={<FilterableTrainers />}/>
+          <Route path='/trainer/:id' element={<TrainerDetails/>}/>
         </Routes>
         <Footer />
       </div>
