@@ -1,15 +1,21 @@
 // import trainerData from './trainers.json';
 import PropTypes from "prop-types";
+import { Card, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const Trainer = (props) => {
     const nav = useNavigate();
-  
-    return ( <div onClick={() => nav("/trainer/" + props.id)} className="trainer">
-        <p>Name: {props.name}</p>
-        <p>Age: {props.age}</p>
-        <p>Job: {props.job}</p>
-    </div> );
+
+    return (
+        <Col>
+            <Card onClick={() => nav("/trainer/" + props.id)} className="trainer">
+                <Card.Title>{props.name}</Card.Title>
+                <Card.Body>
+                    <Card.Text>Age: {props.age}</Card.Text>
+                    <Card.Text>Job: {props.job}</Card.Text>
+                </Card.Body>
+            </Card>
+        </Col>);
 }
 
 Trainer.defaultProps = {
@@ -22,5 +28,5 @@ Trainer.propTypes = {
     age: PropTypes.number.isRequired,
     job: PropTypes.string.isRequired,
 }
- 
+
 export default Trainer;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import productData from "../products.json";
+import { Col, Container, Form, Row, Table } from "react-bootstrap";
 
 function FilterableProductTable() {
     const [search, setSearch] = useState("");
@@ -45,13 +46,24 @@ function FilterableProductTable() {
         }
     }
 
-    return (<>
+    return (<div style={{ maxWidth: "fit-content", margin: "auto" }}>
         <h2>Product Table</h2>
-        <input placeholder="Search..." checked={search} onChange={e => setSearch(e.target.value)} />
-        <br />
-        <input type="checkbox" id="inStock" checked={inStock} onChange={e => setInStock(e.target.checked)} />
-        <label htmlFor="inStock">Only show products in stock</label>
-        <table style={{ margin: "auto" }}>
+        <Container>
+            <Row>
+                <Form.Control placeholder="Search..." checked={search} onChange={e => setSearch(e.target.value)} />
+            </Row>
+            <Row className="justify-content-center">
+                <Col sm={2}>
+                    <Form.Check type="checkbox" id="inStock" checked={inStock} onChange={e => setInStock(e.target.checked)} />
+                </Col>
+                <Col>
+                    <Form.Label htmlFor="inStock">Only show products in stock</Form.Label>
+                </Col>
+            </Row>
+        </Container>
+        <Form.Group>
+        </Form.Group>
+        <Table>
             <thead>
                 <tr>
                     <th>Name</th>
@@ -61,8 +73,8 @@ function FilterableProductTable() {
             <tbody>
                 {tableData}
             </tbody>
-        </table>
-    </>);
+        </Table>
+    </div>);
 }
 
 export default FilterableProductTable;

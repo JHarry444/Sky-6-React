@@ -1,11 +1,11 @@
-div.trainer:hover {
+/* div.trainer:hover {
   cursor: pointer;
   border: 1px solid black;
   text-decoration: underline;
   color: red;
   max-width: 30%;
   margin: auto;
-}
+} */
 
 .App {
   text-align: center;
